@@ -24,5 +24,5 @@ A simple REST API built with **Spring Boot** and **Spring AI** that integrates w
 
 ---
 
-## 📂 Project Structure
+
 
