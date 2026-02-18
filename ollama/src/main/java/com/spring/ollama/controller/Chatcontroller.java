@@ -1,6 +1,7 @@
 package com.spring.ollama.controller;
 
 
+import com.spring.ollama.entity.Tut;
 import com.spring.ollama.service.ChatServiceImpl;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,7 @@ public class Chatcontroller {
        this.chatClient = builder.build();
    }
     @GetMapping("chat")
-    public ResponseEntity<String> chat(@RequestParam(value = "q") String query){
+    public ResponseEntity<Tut> chat(@RequestParam(value = "q") String query){
 //      String response=  this.chatClient.prompt(query).call().content();
 //        return ResponseEntity.ok(response);
        return ResponseEntity.ok(chatService.chat(query));

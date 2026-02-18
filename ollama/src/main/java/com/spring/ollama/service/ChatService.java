@@ -1,5 +1,7 @@
 package com.spring.ollama.service;
 
+import com.spring.ollama.entity.Tut;
+
 public interface ChatService {
-    String chat(String query);
+    Tut chat(String query);
 }
