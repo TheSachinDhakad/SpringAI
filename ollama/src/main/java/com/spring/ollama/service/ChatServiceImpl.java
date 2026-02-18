@@ -17,10 +17,12 @@ public class ChatServiceImpl implements ChatService{
     @Override
     public Tut chat(String query) {
         Prompt p = new Prompt(query);
+
 //        var response = this.chatClient.prompt(p).
 //                call().chatResponse().getResult().getOutput().getText();
 //        System.out.println(response);
 
+        // use entity
         Tut t = this.chatClient.prompt(p).call().entity(Tut.class);
 
 
